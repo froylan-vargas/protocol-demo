@@ -493,11 +493,20 @@ button {
 }
 
 .field-card input {
+  display: block;
   min-height: 42px;
+  max-width: 100%;
   padding: 0 12px;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #f8fafc;
+}
+
+.field-card input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 42px;
+  line-height: 42px;
 }
 
 .date-card {
