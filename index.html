@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Protocolo Clinico - Demo Movil</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <section class="phone" aria-label="Demo movil de protocolo clinico">
+        <div class="status-bar" aria-hidden="true">
+          <span>3:10</span>
+          <span class="dynamic-island"></span>
+          <span class="status-icons">5G 92%</span>
+        </div>
+
+        <header class="app-header">
+          <button class="icon-button" type="button" aria-label="Volver">
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div>
+            <p class="eyebrow">Ensayo clinico</p>
+            <h1 id="screen-title">Pacientes</h1>
+          </div>
+          <button class="text-button" type="button">Salir</button>
+        </header>
+
+        <nav class="tab-bar" aria-label="Pantallas de demo">
+          <button class="tab is-active" type="button" data-screen="patients">
+            <span class="tab-icon">+</span>
+            <span>Pacientes</span>
+          </button>
+          <button class="tab" type="button" data-screen="followup">
+            <span class="tab-icon">✓</span>
+            <span>Seguimiento</span>
+          </button>
+          <button class="tab" type="button" data-screen="forms">
+            <span class="tab-icon">?</span>
+            <span>Cuestionarios</span>
+          </button>
+        </nav>
+
+        <section class="screen is-active" id="patients-screen" data-title="Pacientes">
+          <div class="hero-row">
+            <div>
+              <p class="section-kicker">Panel medico</p>
+              <h2>Gestion de pacientes</h2>
+            </div>
+            <button class="primary-fab" type="button" aria-label="Crear paciente">+</button>
+          </div>
+
+          <label class="search-field">
+            <span aria-hidden="true">⌕</span>
+            <input type="search" placeholder="Buscar paciente, folio o protocolo" />
+          </label>
+
+          <div class="quick-actions">
+            <button type="button">
+              <strong>Nuevo</strong>
+              <span>Registro inicial</span>
+            </button>
+            <button type="button">
+              <strong>Ayuda</strong>
+              <span>Soporte tecnico</span>
+            </button>
+          </div>
+
+          <article class="patient-card">
+            <div class="avatar" aria-hidden="true">FY</div>
+            <div class="patient-main">
+              <p>FYP: Flores Yescas Patricia</p>
+              <span>Seguimiento activo</span>
+            </div>
+            <span class="chevron" aria-hidden="true">›</span>
+          </article>
+
+          <div class="stats-grid">
+            <article>
+              <span>1</span>
+              <p>Paciente activo</p>
+            </article>
+            <article>
+              <span>2</span>
+              <p>Acciones pendientes</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="screen" id="followup-screen" data-title="Paciente">
+          <div class="profile-header">
+            <div class="profile-avatar" aria-hidden="true">FY</div>
+            <div>
+              <p class="section-kicker">Paciente</p>
+              <h2>Flores Yescas Patricia</h2>
+              <span class="status-chip">En seguimiento</span>
+            </div>
+          </div>
+
+          <div class="timeline-card">
+            <div class="timeline-item complete">
+              <span></span>
+              <div>
+                <p>Consentimiento informado</p>
+                <small>Completado</small>
+              </div>
+            </div>
+            <div class="timeline-item complete">
+              <span></span>
+              <div>
+                <p>Informacion inicial</p>
+                <small>Completado hoy</small>
+              </div>
+            </div>
+            <div class="timeline-item active">
+              <span></span>
+              <div>
+                <p>Informacion de seguimiento</p>
+                <small>17 jul 2025</small>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span></span>
+              <div>
+                <p>Cuestionario final</p>
+                <small>05 sep 2025</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="action-stack">
+            <button class="danger-action" type="button">Cuestionario de abandono</button>
+            <button class="danger-action ghost" type="button">Reporte de reacciones adversas</button>
+          </div>
+        </section>
+
+        <section class="screen" id="forms-screen" data-title="Nuevo paciente">
+          <div class="form-progress">
+            <div>
+              <p class="section-kicker">Otra informacion</p>
+              <h2>Habitos y fechas</h2>
+            </div>
+            <span>Paso 4/5</span>
+          </div>
+
+          <article class="question-card">
+            <p class="question-title">Realiza algun tipo de actividad fisica</p>
+            <div class="segmented">
+              <button class="is-selected" type="button">Si</button>
+              <button type="button">No</button>
+            </div>
+          </article>
+
+          <label class="field-card">
+            <span>Tipo de actividad fisica</span>
+            <input type="text" placeholder="Ej. caminata, gimnasio, natacion" />
+          </label>
+
+          <article class="question-card">
+            <p class="question-title">Frecuencia</p>
+            <div class="choice-list">
+              <button type="button">Diario</button>
+              <button class="is-selected" type="button">Una vez a la semana</button>
+              <button type="button">Una vez al mes</button>
+              <button type="button">No realizo actividad fisica</button>
+              <button type="button">Otro</button>
+            </div>
+          </article>
+
+          <label class="field-card date-card">
+            <span>Fecha de inicio de la administracion</span>
+            <input type="date" value="2025-07-17" />
+          </label>
+        </section>
+      </section>
+
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
